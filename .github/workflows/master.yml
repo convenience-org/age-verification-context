@@ -1,9 +1,6 @@
-name: Master
+name: Node CI
 
-on:
-  push:
-    branches:
-      - 'master'
+on: [push]
 
 jobs:
   test-node:
