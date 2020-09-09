@@ -44,7 +44,7 @@ const obj = {
 };
 
 // get context data for a specific context
-const data = contexts.get('https://w3id.org/age/v1.jsonld');
+const data = contexts.get('https://w3id.org/age/v1');
 // ...
 ```
 
