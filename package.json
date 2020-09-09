@@ -1,6 +1,6 @@
 {
   "name": "@convenience-org/age-verification-context",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "description": "Age Verification token context for JSON-LD.",
   "main": "dist/context.js",
   "module": "./dist/context.esm.js",
