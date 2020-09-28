@@ -11,12 +11,16 @@ jobs:
         node-version: [14.x]
     steps:
     - uses: actions/checkout@v2
+      with:
+          persist-credentials: false
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
         registry-url: 'https://npm.pkg.github.com'
-    - run: npm install
+    - run: |
+        git config --global url."https://${{ secrets.NACS_BUILDER_CI_TOKEN }}@github.com/convenience-org/".insteadOf ssh://git@github.com/convenience-org/
+        npm install
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NACS_BUILDER_CI_TOKEN }}
     - name: Run test with Node.js ${{ matrix.node-version }}
@@ -29,11 +33,15 @@ jobs:
          node-version: [14.x]
      steps:
      - uses: actions/checkout@v2
+       with:
+           persist-credentials: false
      - name: Use Node.js ${{ matrix.node-version }}
        uses: actions/setup-node@v1
        with:
          node-version: ${{ matrix.node-version }}
-     - run: npm install
+    - run: |
+        git config --global url."https://${{ secrets.NACS_BUILDER_CI_TOKEN }}@github.com/convenience-org/".insteadOf ssh://git@github.com/convenience-org/
+        npm install
      - name: Run karma tests
        run: npm run test-karma
   lint:
@@ -44,12 +52,16 @@ jobs:
         node-version: [14.x]
     steps:
     - uses: actions/checkout@v2
+      with:
+          persist-credentials: false
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
         registry-url: 'https://npm.pkg.github.com'
-    - run: npm install
+    - run: |
+        git config --global url."https://${{ secrets.NACS_BUILDER_CI_TOKEN }}@github.com/convenience-org/".insteadOf ssh://git@github.com/convenience-org/
+        npm install
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NACS_BUILDER_CI_TOKEN }}
     - name: Run eslint
