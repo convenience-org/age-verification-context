@@ -3,8 +3,8 @@
     "@protected": "true",
     "id": "@id",
     "type": "@type",
-    "ageOver": {
-      "@id": "https://w3id.org/age#ageOver",
+    "overAge": {
+      "@id": "https://w3id.org/age#overAge",
       "@type": "http://www.w3.org/2001/XMLSchema#positiveInteger"
     }
   }
