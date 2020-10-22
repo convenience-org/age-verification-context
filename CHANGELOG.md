@@ -1,4 +1,6 @@
-# age-verification-context ChangeLog
+# @convenience-org/age-verification-context ChangeLog
+
+## 2.0.1 - 2020-10-22
 
 ### Fixed
 - Add `appContextMap` and `documentLoader` to named rollup exports.
