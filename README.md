@@ -37,11 +37,15 @@ const {
 // use URL in a JSON-LD context
 const obj = {
   "@context": [
-    constants.AGE_CONTEXT_URL,
+    constants.CONTEXT_URL,
     // ...
   ],
   // ...
 };
+
+// Codec term map value for CBOR-LD
+constants.CBORLD_CODEC_VALUE
+// 0x16
 
 // get context data for a specific context
 const data = contexts.get('https://w3id.org/age/v1');

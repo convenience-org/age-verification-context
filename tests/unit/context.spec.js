@@ -7,12 +7,12 @@ const {
   contexts, constants, appContextMap, documentLoader
 } = require('../../dist/context.js');
 
-const contextUrl = constants.AGE_CONTEXT_URL;
+const contextUrl = constants.CONTEXT_URL;
 
 describe('Concealed Id Token Context', () => {
   it('constants', async () => {
     expect(constants).to.exist();
-    expect(constants).to.have.property('CBORLD_APP_CONTEXT_VALUE');
+    expect(constants).to.have.property('CBORLD_CODEC_VALUE');
   });
 
   it('contexts', async () => {
