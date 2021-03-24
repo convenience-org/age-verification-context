@@ -1,6 +1,6 @@
 # @convenience-org/age-verification-context ChangeLog
 
-## 3.0.0 - 
+## 3.0.0 - 2021-03-24
 
 ### Changed
 - **BREAKING**: Changed CBOR-LD codec value from `0x8743` to `0x16` to match
