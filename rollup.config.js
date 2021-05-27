@@ -14,8 +14,8 @@ export default {
         'dist/context.js': [
           'constants',
           'contexts',
-          'appContextMap',
-          'documentLoader'
+          'CONTEXT_URL_V1',
+          'CONTEXT_V1'
         ]
       }
     })
