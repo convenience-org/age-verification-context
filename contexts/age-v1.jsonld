@@ -3,9 +3,34 @@
     "@protected": "true",
     "id": "@id",
     "type": "@type",
+    "description": "https://schema.org/description",
+    "image": "https://schema.org/image",
+    "name": "https://schema.org/name",
+    "PersonalPhotoCredential": "https://convenience.org/vocab#PersonalPhotoCredential",
+    "concealedIdToken": {
+      "@id": "https://w3id.org/cit#concealedIdToken",
+      "@type": "https://w3id.org/security#multibase"
+    },
     "overAge": {
       "@id": "https://w3id.org/age#overAge",
       "@type": "http://www.w3.org/2001/XMLSchema#positiveInteger"
-    }
+    },
+    "OverAgeTokenCredential": {
+      "@id": "https://w3id.org/age#OverAgeTokenCredential",
+      "@context": {
+        "@protected": true,
+        "meta": {
+          "@id": "https://w3id.org/cit#meta",
+          "@type": "https://w3id.org/security#multibase"
+        },
+        "payload": {
+          "@id": "https://w3id.org/cit#payload",
+          "@type": "https://w3id.org/security#multibase"
+        }
+      }
+    },
+    "anchoredResource": "https://convenience.org/vocab#anchoredResource",
+    "AgeVerificationCredential": "https://convenience.org/vocab#AgeVerificationCredential",
+    "contentHash": "https://w3id.org/security#contentHash"
   }
 }
