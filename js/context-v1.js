@@ -19,33 +19,55 @@ module.exports = {
       'https://convenience.org/vocab#PersonalPhotoCredential',
 
     // Used for the OverAgeTokenCredential
-    concealedIdToken: {
-      '@id': 'https://w3id.org/cit#concealedIdToken',
-      '@type': 'https://w3id.org/security#multibase'
-    },
-    overAge: {
-      '@id': 'https://w3id.org/age#overAge',
-      '@type': 'http://www.w3.org/2001/XMLSchema#positiveInteger'
-    },
     OverAgeTokenCredential: {
       '@id': 'https://w3id.org/age#OverAgeTokenCredential',
       '@context': {
         '@protected': true,
-        meta: {
-          '@id': 'https://w3id.org/cit#meta',
-          '@type': 'https://w3id.org/security#multibase'
+        overAge: {
+          '@id': 'https://w3id.org/age#overAge',
+          '@type': 'http://www.w3.org/2001/XMLSchema#positiveInteger'
         },
-        payload: {
-          '@id': 'https://w3id.org/cit#payload',
+        concealedIdToken: {
+          '@id': 'https://w3id.org/cit#concealedIdToken',
           '@type': 'https://w3id.org/security#multibase'
         }
       }
     },
 
-    // Used for the AgeVerificationCredential
-    anchoredResource: 'https://convenience.org/vocab#anchoredResource',
-    AgeVerificationCredential:
-      'https://convenience.org/vocab#AgeVerificationCredential',
-    contentHash: 'https://w3id.org/security#contentHash'
+    AgeVerificationCredential: {
+      '@id': 'https://w3id.org/age#AgeVerificationCredential',
+      '@context': {
+        '@protected': true,
+        overAge: {
+          '@id': 'https://w3id.org/age#overAge',
+          '@type': 'http://www.w3.org/2001/XMLSchema#positiveInteger'
+        },
+        anchoredResource: 'https://w3id.org/security#anchoredResource',
+        contentHash: 'https://w3id.org/security#contentHash',
+
+        // refreshService section of the VC
+        // eslint-disable-next-line max-len
+        VerifiableCredentialRefreshService2021: 'https://w3id.org/vc-refresh-service#VerifiableCredentialRefreshService2021',
+        refreshService:
+          'https://w3id.org/vc-refresh-service#refreshService',
+        url: {
+          '@id': 'https://w3id.org/vc-refresh-service#url',
+          '@type': '@id'
+        },
+        refreshToken: {
+          '@id': 'https://w3id.org/vc-refresh-service#refreshToken',
+          '@type': 'https://w3id.org/security#multibase'
+        }
+      }
+    }
+  },
+
+  AgeVerificationContainerCredential: {
+    '@id': 'https://w3id.org/age#AgeVerificationContainerCredential',
+    '@context': {
+      '@protected': true,
+      anchoredResource: 'https://w3id.org/security#anchoredResource',
+      contentHash: 'https://w3id.org/security#contentHash'
+    }
   }
 };
