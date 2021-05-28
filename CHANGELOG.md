@@ -1,5 +1,11 @@
 # @convenience-org/age-verification-context ChangeLog
 
+## 4.0.0 - 2021-05-28
+
+### Changed
+- **BREAKING**: Removed `appContextMap` and `documentLoader` exports (unused).
+- Add additional terms from data model.
+
 ## 3.0.0 - 2021-03-24
 
 ### Changed
