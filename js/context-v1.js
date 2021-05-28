@@ -11,7 +11,10 @@ module.exports = {
 
     // Used for several VCs (for issuer display)
     description: 'https://schema.org/description',
-    image: 'https://schema.org/image',
+    image: {
+      '@id': 'https://schema.org/image',
+      '@type': '@id'
+    },
     name: 'https://schema.org/name',
 
     // Used in OverAgeTokenCredential and AgeVerificationCredential

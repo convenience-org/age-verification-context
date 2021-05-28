@@ -4,7 +4,10 @@
     "id": "@id",
     "type": "@type",
     "description": "https://schema.org/description",
-    "image": "https://schema.org/image",
+    "image": {
+      "@id": "https://schema.org/image",
+      "@type": "@id"
+    },
     "name": "https://schema.org/name",
     "overAge": {
       "@id": "https://w3id.org/age#overAge",
