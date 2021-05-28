@@ -14,7 +14,10 @@
       "@id": "https://w3id.org/cit#concealedIdToken",
       "@type": "https://w3id.org/security#multibase"
     },
-    "anchoredResource": "https://w3id.org/security#anchoredResource",
+    "anchoredResource": {
+      "@id": "https://w3id.org/security#anchoredResource",
+      "@type": "@id"
+    },
     "contentHash": "https://w3id.org/security#contentHash",
     "PersonalPhotoCredential": "https://convenience.org/vocab#PersonalPhotoCredential",
     "OverAgeTokenCredential": "https://w3id.org/age#OverAgeTokenCredential",
