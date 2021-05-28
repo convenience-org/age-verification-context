@@ -15,10 +15,13 @@
       "@type": "https://w3id.org/security#multibase"
     },
     "anchoredResource": {
-      "@id": "https://w3id.org/security#anchoredResource",
-      "@type": "@id"
+      "@type": "@id",
+      "@id": "https://w3id.org/security#anchoredResource"
     },
-    "contentHash": "https://w3id.org/security#contentHash",
+    "contentHash": {
+      "@id": "https://w3id.org/security#contentHash",
+      "@type": "https://w3id.org/security#multibase"
+    },
     "PersonalPhotoCredential": "https://convenience.org/vocab#PersonalPhotoCredential",
     "OverAgeTokenCredential": "https://w3id.org/age#OverAgeTokenCredential",
     "VerifiableCredentialRefreshService2021": {

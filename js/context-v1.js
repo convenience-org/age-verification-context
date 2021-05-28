@@ -24,9 +24,14 @@ module.exports = {
       '@id': 'https://w3id.org/cit#concealedIdToken',
       '@type': 'https://w3id.org/security#multibase'
     },
-
-    anchoredResource: 'https://w3id.org/security#anchoredResource',
-    contentHash: 'https://w3id.org/security#contentHash',
+    anchoredResource: {
+      '@type': '@id',
+      '@id': 'https://w3id.org/security#anchoredResource'
+    },
+    contentHash: {
+      '@id': 'https://w3id.org/security#contentHash',
+      '@type': 'https://w3id.org/security#multibase'
+    },
 
     PersonalPhotoCredential:
       'https://convenience.org/vocab#PersonalPhotoCredential',
