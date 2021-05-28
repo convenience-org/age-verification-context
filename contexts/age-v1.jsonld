@@ -18,27 +18,21 @@
     "contentHash": "https://w3id.org/security#contentHash",
     "PersonalPhotoCredential": "https://convenience.org/vocab#PersonalPhotoCredential",
     "OverAgeTokenCredential": "https://w3id.org/age#OverAgeTokenCredential",
-    "AgeVerificationCredential": {
-      "@id": "https://w3id.org/age#AgeVerificationCredential",
+    "VerifiableCredentialRefreshService2021": {
+      "@id": "https://w3id.org/vc-refresh-service#VerifiableCredentialRefreshService2021",
       "@context": {
         "@protected": true,
-        "VerifiableCredentialRefreshService2021": {
-          "@id": "https://w3id.org/vc-refresh-service#VerifiableCredentialRefreshService2021",
-          "@context": {
-            "@protected": true,
-            "url": {
-              "@id": "https://w3id.org/vc-refresh-service#url",
-              "@type": "@id"
-            },
-            "refreshToken": {
-              "@id": "https://w3id.org/vc-refresh-service#refreshToken",
-              "@type": "https://w3id.org/security#multibase"
-            }
-          }
+        "url": {
+          "@id": "https://schema.org/url",
+          "@type": "@id"
         },
-        "refreshService": "https://w3id.org/vc-refresh-service#refreshService"
+        "refreshToken": {
+          "@id": "https://w3id.org/vc-refresh-service#refreshToken",
+          "@type": "https://w3id.org/security#multibase"
+        }
       }
-    }
-  },
-  "AgeVerificationContainerCredential": "https://w3id.org/age#AgeVerificationContainerCredential"
+    },
+    "AgeVerificationCredential": "https://w3id.org/age#AgeVerificationCredential",
+    "AgeVerificationContainerCredential": "https://w3id.org/age#AgeVerificationContainerCredential"
+  }
 }

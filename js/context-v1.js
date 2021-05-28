@@ -28,40 +28,31 @@ module.exports = {
     anchoredResource: 'https://w3id.org/security#anchoredResource',
     contentHash: 'https://w3id.org/security#contentHash',
 
-    // Used for the PersonalPhotoCredential
     PersonalPhotoCredential:
       'https://convenience.org/vocab#PersonalPhotoCredential',
 
-    // Used for the OverAgeTokenCredential
     OverAgeTokenCredential: 'https://w3id.org/age#OverAgeTokenCredential',
 
-    AgeVerificationCredential: {
-      '@id': 'https://w3id.org/age#AgeVerificationCredential',
+    // refreshService section of the VC
+    VerifiableCredentialRefreshService2021: {
+      // eslint-disable-next-line max-len
+      '@id': 'https://w3id.org/vc-refresh-service#VerifiableCredentialRefreshService2021',
       '@context': {
         '@protected': true,
-
-        // refreshService section of the VC
-        VerifiableCredentialRefreshService2021: {
-          // eslint-disable-next-line max-len
-          '@id': 'https://w3id.org/vc-refresh-service#VerifiableCredentialRefreshService2021',
-          '@context': {
-            '@protected': true,
-            url: {
-              '@id': 'https://w3id.org/vc-refresh-service#url',
-              '@type': '@id'
-            },
-            refreshToken: {
-              '@id': 'https://w3id.org/vc-refresh-service#refreshToken',
-              '@type': 'https://w3id.org/security#multibase'
-            }
-          }
+        url: {
+          '@id': 'https://schema.org/url',
+          '@type': '@id'
         },
-        refreshService:
-          'https://w3id.org/vc-refresh-service#refreshService',
+        refreshToken: {
+          '@id': 'https://w3id.org/vc-refresh-service#refreshToken',
+          '@type': 'https://w3id.org/security#multibase'
+        }
       }
-    }
-  },
+    },
 
-  AgeVerificationContainerCredential:
-    'https://w3id.org/age#AgeVerificationContainerCredential'
+    AgeVerificationCredential: 'https://w3id.org/age#AgeVerificationCredential',
+
+    AgeVerificationContainerCredential:
+      'https://w3id.org/age#AgeVerificationContainerCredential'
+  }
 };
