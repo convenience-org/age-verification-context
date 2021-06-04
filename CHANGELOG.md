@@ -1,4 +1,4 @@
-# @convenience-org/age-verification-context ChangeLog
+# age-verification-context ChangeLog
 
 ## 4.0.0 - 2021-05-28
 
