@@ -1,5 +1,5 @@
 {
-  "name": "@convenience-org/age-verification-context",
+  "name": "age-verification-context",
   "version": "4.0.1-0",
   "description": "Age Verification token context for JSON-LD.",
   "main": "js/index.js",

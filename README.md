@@ -1,4 +1,4 @@
-# Age Verification Token context _(@convenience-org/age-verification-context)_
+# Age Verification Token context _(age-verification-context)_
 
 > Age Verification Token context for JSON-LD.
 
@@ -24,15 +24,15 @@ Requires Node.js 14+
 To install via NPM:
 
 ```
-npm install @convenience-org/age-verification-context
+npm install age-verification-context
 ```
 
 ## Usage
 
 ```js
 const {
-  contexts, constants, appContextMap, documentLoader
-} = require('@convenience-org/age-verification-context');
+  contexts, constants, CONTEXT_URL_V1
+} = require('age-verification-context');
 
 // use URL in a JSON-LD context
 const obj = {
@@ -59,11 +59,9 @@ applications.
 
 The library exports two properties:
 - `constants`: A Object that maps constants to well-known context URLs. The
-  main constant `CIT_CONTEXT_URL` may be updated from time to time to the
+  main constant `CONTEXT_URL_V1` may be updated from time to time to the
   latest context location.
 - `contexts`: A `Map` that maps URLs to full context data.
-- `appContextMap`: For use with `cborld` library.
-- `documentLoader`
 
 ## Commercial Support
 
