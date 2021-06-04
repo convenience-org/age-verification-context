@@ -1,6 +1,6 @@
 {
   "name": "age-verification-context",
-  "version": "4.0.1-0",
+  "version": "5.0.0",
   "description": "Age Verification token context for JSON-LD.",
   "main": "js/index.js",
   "module": "./dist/context.esm.js",
