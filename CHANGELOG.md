@@ -1,5 +1,10 @@
 # age-verification-context ChangeLog
 
+## 5.0.0 - 2021-06-03
+
+### Changed
+- **BREAKING**: Rename npm package to `age-verification-context` (now unscoped).
+
 ## 4.0.0 - 2021-05-28
 
 ### Changed
