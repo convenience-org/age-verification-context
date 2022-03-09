@@ -31,8 +31,8 @@ module.exports = {
       '@type': '@id',
       '@id': 'https://w3id.org/security#anchoredResource'
     },
-    multibaseDigest: {
-      '@id': 'https://w3id.org/security#multibaseDigest',
+    digestMultibase: {
+      '@id': 'https://w3id.org/security#digestMultibase',
       '@type': 'https://w3id.org/security#multibase'
     },
 
