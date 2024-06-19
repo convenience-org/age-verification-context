@@ -8,6 +8,7 @@
     "contexts",
     "dist/context.js",
     "dist/context.esm.js",
+    "dist/context.*.txt",
     "js/**/*.js"
   ],
   "repository": {
