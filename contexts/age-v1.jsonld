@@ -1,6 +1,6 @@
 {
   "@context": {
-    "@protected": "true",
+    "@protected": true,
     "id": "@id",
     "type": "@type",
     "description": "https://schema.org/description",
