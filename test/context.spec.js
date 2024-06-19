@@ -6,7 +6,7 @@ const {
   contexts, constants, CONTEXT_V1, CONTEXT_URL_V1
 } = require('../dist/context.js');
 
-describe('Concealed Id Token Context', () => {
+describe('Age Verification Context', () => {
   it('constants', async () => {
     expect(constants).to.exist;
     expect(constants).to.have.property('CONTEXT_URL_V1');
