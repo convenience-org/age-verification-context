@@ -1,11 +1,11 @@
 /*!
- * Copyright (c) 2021 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2021-2024 Digital Bazaar, Inc. All rights reserved.
  */
 'use strict';
 
 module.exports = {
   '@context': {
-    '@protected': 'true',
+    '@protected': true,
     id: '@id',
     type: '@type',
 

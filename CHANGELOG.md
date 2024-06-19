@@ -5,6 +5,9 @@
 ### Changed
 - **BREAKING**: Replace `contentHash` property with `digestMultibase`.
 
+### Fixed
+- Change context `@protected` value to boolean.
+
 ## 5.0.0 - 2021-06-03
 
 ### Changed
