@@ -6,8 +6,9 @@
   "module": "./dist/context.esm.js",
   "files": [
     "contexts",
-    "dist",
-    "js"
+    "dist/context.js",
+    "dist/context.esm.js",
+    "js/**/*.js"
   ],
   "repository": {
     "type": "git",

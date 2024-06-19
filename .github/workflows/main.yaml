@@ -18,7 +18,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         registry-url: 'https://npm.pkg.github.com'
-    - run: |
+    - name: Install
+      run: |
         git config --global url."https://${{ secrets.NACS_BUILDER_CI_TOKEN }}@github.com/convenience-org/".insteadOf ssh://git@github.com/convenience-org/
         npm install
       env:
@@ -40,7 +41,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         registry-url: 'https://npm.pkg.github.com'
-    - run: |
+    - name: Install
+      run: |
         git config --global url."https://${{ secrets.NACS_BUILDER_CI_TOKEN }}@github.com/convenience-org/".insteadOf ssh://git@github.com/convenience-org/
         npm install
       env:
@@ -61,7 +63,8 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - run: |
+    - name: Install
+      run: |
         git config --global url."https://${{ secrets.NACS_BUILDER_CI_TOKEN }}@github.com/convenience-org/".insteadOf ssh://git@github.com/convenience-org/
         npm install
     - name: Run karma tests
