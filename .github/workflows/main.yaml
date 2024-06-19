@@ -1,61 +1,20 @@
-name: Node CI
+name: Main CI
 
 on: [push]
 
 jobs:
-  test-node:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    strategy:
-      matrix:
-        node-version: [14.x]
-    steps:
-    - uses: actions/checkout@v2
-      with:
-          persist-credentials: false
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-        registry-url: 'https://npm.pkg.github.com'
-    - run: |
-        git config --global url."https://${{ secrets.NACS_BUILDER_CI_TOKEN }}@github.com/convenience-org/".insteadOf ssh://git@github.com/convenience-org/
-        npm install
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NACS_BUILDER_CI_TOKEN }}
-    - name: Run test with Node.js ${{ matrix.node-version }}
-      run: npm run test
-  test-karma:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    strategy:
-      matrix:
-        node-version: [14.x]
-    steps:
-    - uses: actions/checkout@v2
-      with:
-          persist-credentials: false
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: |
-        git config --global url."https://${{ secrets.NACS_BUILDER_CI_TOKEN }}@github.com/convenience-org/".insteadOf ssh://git@github.com/convenience-org/
-        npm install
-    - name: Run karma tests
-      run: npm run test-karma
   lint:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [20.x]
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
           persist-credentials: false
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         registry-url: 'https://npm.pkg.github.com'
@@ -66,4 +25,44 @@ jobs:
         NODE_AUTH_TOKEN: ${{ secrets.NACS_BUILDER_CI_TOKEN }}
     - name: Run eslint
       run: npm run lint
-
+  test-node:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    steps:
+    - uses: actions/checkout@v4
+      with:
+          persist-credentials: false
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        registry-url: 'https://npm.pkg.github.com'
+    - run: |
+        git config --global url."https://${{ secrets.NACS_BUILDER_CI_TOKEN }}@github.com/convenience-org/".insteadOf ssh://git@github.com/convenience-org/
+        npm install
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NACS_BUILDER_CI_TOKEN }}
+    - name: Run test with Node.js ${{ matrix.node-version }}
+      run: npm run test-node
+  test-karma:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        node-version: [20.x]
+    steps:
+    - uses: actions/checkout@v4
+      with:
+          persist-credentials: false
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: |
+        git config --global url."https://${{ secrets.NACS_BUILDER_CI_TOKEN }}@github.com/convenience-org/".insteadOf ssh://git@github.com/convenience-org/
+        npm install
+    - name: Run karma tests
+      run: npm run test-karma
