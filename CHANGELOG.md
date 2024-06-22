@@ -1,6 +1,6 @@
 # age-verification-context ChangeLog
 
-## 6.0.0 -
+## 6.0.0 - 2024-06-22
 
 ### Changed
 - **BREAKING**: Replace `contentHash` property with `digestMultibase`.
